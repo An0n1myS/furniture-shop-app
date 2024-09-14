@@ -12,7 +12,7 @@ class CollectionController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/collections",
+     *     path="/api/v1/collections",
      *     tags={"Collections"},
      *     summary="Получить все коллекции",
      *     description="Возвращает список всех коллекций.",
@@ -33,7 +33,7 @@ class CollectionController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/collections/{id}",
+     *     path="/api/v1/collections/{id}",
      *     tags={"Collections"},
      *     summary="Получить коллекцию по ID",
      *     description="Возвращает коллекцию по указанному ID.",
@@ -63,7 +63,7 @@ class CollectionController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/collections",
+     *     path="/api/v1/collections",
      *     tags={"Collections"},
      *     summary="Создать новую коллекцию",
      *     description="Создает новую коллекцию.",
@@ -90,7 +90,7 @@ class CollectionController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/collections/{id}",
+     *     path="/api/v1/collections/{id}",
      *     tags={"Collections"},
      *     summary="Обновить коллекцию по ID",
      *     description="Обновляет существующую коллекцию.",
@@ -125,7 +125,7 @@ class CollectionController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/collections/{id}",
+     *     path="/api/v1/collections/{id}",
      *     tags={"Collections"},
      *     summary="Удалить коллекцию по ID",
      *     description="Удаляет коллекцию по указанному ID.",

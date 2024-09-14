@@ -18,7 +18,7 @@ class UserController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/users",
+     *     path="/api/v1/users",
      *     tags={"Пользователи"},
      *     summary="Получить всех пользователей",
      *     description="Возвращает список всех пользователей.",
@@ -39,7 +39,7 @@ class UserController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/users/{id}",
+     *     path="/api/v1/users/{id}",
      *     tags={"Пользователи"},
      *     summary="Получить пользователя по ID",
      *     description="Возвращает пользователя по его ID.",
@@ -68,7 +68,7 @@ class UserController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/users",
+     *     path="/api/v1/users",
      *     tags={"Пользователи"},
      *     summary="Создать нового пользователя",
      *     description="Создаёт нового пользователя и возвращает его.",
@@ -98,7 +98,7 @@ class UserController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/users/{id}",
+     *     path="/api/v1/users/{id}",
      *     tags={"Пользователи"},
      *     summary="Обновить пользователя",
      *     description="Обновляет существующего пользователя по его ID.",
@@ -135,7 +135,7 @@ class UserController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/users/{id}",
+     *     path="/api/v1/users/{id}",
      *     tags={"Пользователи"},
      *     summary="Удалить пользователя",
      *     description="Удаляет существующего пользователя по его ID.",

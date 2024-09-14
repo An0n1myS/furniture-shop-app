@@ -12,14 +12,14 @@ use OpenApi\Annotations as OA;
  *     @OA\Contact(
  *         email="support@furnitureapp.com"
  *     ),
- *     @OA\License(
- *         name="Apache 2.0",
- *         url="http://www.apache.org/licenses/LICENSE-2.0.html"
- *     )
+ * )
+ *
+ * @OA\PathItem(
+ *     path="/api/v1/"
  * )
  *
  * @OA\Server(
- *     url="http://localhost:8000/api",
+ *     url="http://localhost:8000/api/v1/",
  *     description="Local Development Server"
  * )
  */

@@ -18,7 +18,7 @@ class CategoryController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/categories",
+     *     path="/api/v1/categories",
      *     tags={"Категории"},
      *     summary="Получить все категории",
      *     description="Возвращает список всех категорий.",
@@ -39,7 +39,7 @@ class CategoryController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/categories/{id}",
+     *     path="/api/v1/categories/{id}",
      *     tags={"Категории"},
      *     summary="Получить категорию по ID",
      *     description="Возвращает категорию по её ID.",
@@ -68,7 +68,7 @@ class CategoryController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/categories",
+     *     path="/api/v1/categories",
      *     tags={"Категории"},
      *     summary="Создать новую категорию",
      *     description="Создаёт новую категорию и возвращает её.",
@@ -98,7 +98,7 @@ class CategoryController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/categories/{id}",
+     *     path="/api/v1/categories/{id}",
      *     tags={"Категории"},
      *     summary="Обновить категорию",
      *     description="Обновляет существующую категорию по её ID.",
@@ -135,7 +135,7 @@ class CategoryController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/categories/{id}",
+     *     path="/api/v1/categories/{id}",
      *     tags={"Категории"},
      *     summary="Удалить категорию",
      *     description="Удаляет существующую категорию по её ID.",

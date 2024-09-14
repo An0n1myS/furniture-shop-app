@@ -18,7 +18,7 @@ class OrderItemController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/order-items",
+     *     path="/api/v1/order-items",
      *     tags={"Элементы заказа"},
      *     summary="Получить все элементы заказа",
      *     description="Возвращает список всех элементов заказа.",
@@ -39,7 +39,7 @@ class OrderItemController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/order-items/{id}",
+     *     path="/api/v1/order-items/{id}",
      *     tags={"Элементы заказа"},
      *     summary="Получить элемент заказа по ID",
      *     description="Возвращает элемент заказа по его ID.",
@@ -68,7 +68,7 @@ class OrderItemController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/order-items",
+     *     path="/api/v1/order-items",
      *     tags={"Элементы заказа"},
      *     summary="Создать новый элемент заказа",
      *     description="Создаёт новый элемент заказа и возвращает его.",
@@ -98,7 +98,7 @@ class OrderItemController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/order-items/{id}",
+     *     path="/api/v1/order-items/{id}",
      *     tags={"Элементы заказа"},
      *     summary="Обновить элемент заказа",
      *     description="Обновляет существующий элемент заказа по его ID.",
@@ -135,7 +135,7 @@ class OrderItemController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/order-items/{id}",
+     *     path="/api/v1/order-items/{id}",
      *     tags={"Элементы заказа"},
      *     summary="Удалить элемент заказа",
      *     description="Удаляет существующий элемент заказа по его ID.",

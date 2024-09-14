@@ -17,7 +17,7 @@ class DeliveryController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/deliveries",
+     *     path="/api/v1/deliveries",
      *     tags={"Доставки"},
      *     summary="Получить все доставки",
      *     description="Возвращает список всех доставок.",
@@ -38,7 +38,7 @@ class DeliveryController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/deliveries/{id}",
+     *     path="/api/v1/deliveries/{id}",
      *     tags={"Доставки"},
      *     summary="Получить доставку по ID",
      *     description="Возвращает доставку по её ID.",
@@ -67,7 +67,7 @@ class DeliveryController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/deliveries",
+     *     path="/api/v1/deliveries",
      *     tags={"Доставки"},
      *     summary="Создать новую доставку",
      *     description="Создаёт новую доставку и возвращает её.",
@@ -97,7 +97,7 @@ class DeliveryController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/deliveries/{id}",
+     *     path="/api/v1/deliveries/{id}",
      *     tags={"Доставки"},
      *     summary="Обновить доставку",
      *     description="Обновляет существующую доставку по её ID.",
@@ -134,7 +134,7 @@ class DeliveryController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/deliveries/{id}",
+     *     path="/api/v1/deliveries/{id}",
      *     tags={"Доставки"},
      *     summary="Удалить доставку",
      *     description="Удаляет существующую доставку по её ID.",

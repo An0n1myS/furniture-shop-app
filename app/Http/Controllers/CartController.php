@@ -17,7 +17,7 @@ class CartController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/carts",
+     *     path="/api/v1/carts",
      *     tags={"Корзины"},
      *     summary="Получить все корзины",
      *     description="Возвращает список всех корзин.",
@@ -38,7 +38,7 @@ class CartController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/carts/{id}",
+     *     path="/api/v1/carts/{id}",
      *     tags={"Корзины"},
      *     summary="Получить корзину по ID",
      *     description="Возвращает корзину по её ID.",
@@ -67,7 +67,7 @@ class CartController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/carts",
+     *     path="/api/v1/carts",
      *     tags={"Корзины"},
      *     summary="Создать новую корзину",
      *     description="Создаёт новую корзину и возвращает её.",
@@ -97,7 +97,7 @@ class CartController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/carts/{id}",
+     *     path="/api/v1/carts/{id}",
      *     tags={"Корзины"},
      *     summary="Обновить корзину",
      *     description="Обновляет существующую корзину по её ID.",
@@ -134,7 +134,7 @@ class CartController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/carts/{id}",
+     *     path="/api/v1/carts/{id}",
      *     tags={"Корзины"},
      *     summary="Удалить корзину",
      *     description="Удаляет существующую корзину по её ID.",

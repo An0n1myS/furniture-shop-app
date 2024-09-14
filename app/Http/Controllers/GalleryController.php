@@ -18,7 +18,7 @@ class GalleryController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/galleries",
+     *     path="/api/v1/galleries",
      *     tags={"Галереи"},
      *     summary="Получить все галереи",
      *     description="Возвращает список всех галерей.",
@@ -39,7 +39,7 @@ class GalleryController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/galleries/{id}",
+     *     path="/api/v1/galleries/{id}",
      *     tags={"Галереи"},
      *     summary="Получить галерею по ID",
      *     description="Возвращает галерею по её ID.",
@@ -68,7 +68,7 @@ class GalleryController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/galleries",
+     *     path="/api/v1/galleries",
      *     tags={"Галереи"},
      *     summary="Создать новую галерею",
      *     description="Создаёт новую галерею и возвращает её.",
@@ -98,7 +98,7 @@ class GalleryController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/galleries/{id}",
+     *     path="/api/v1/galleries/{id}",
      *     tags={"Галереи"},
      *     summary="Обновить галерею",
      *     description="Обновляет существующую галерею по её ID.",
@@ -135,7 +135,7 @@ class GalleryController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/galleries/{id}",
+     *     path="/api/v1/galleries/{id}",
      *     tags={"Галереи"},
      *     summary="Удалить галерею",
      *     description="Удаляет существующую галерею по её ID.",

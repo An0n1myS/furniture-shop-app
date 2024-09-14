@@ -18,7 +18,7 @@ class MaterialController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/materials",
+     *     path="/api/v1/materials",
      *     tags={"Материалы"},
      *     summary="Получить все материалы",
      *     description="Возвращает список всех материалов.",
@@ -39,7 +39,7 @@ class MaterialController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/materials/{id}",
+     *     path="/api/v1/materials/{id}",
      *     tags={"Материалы"},
      *     summary="Получить материал по ID",
      *     description="Возвращает материал по его ID.",
@@ -68,7 +68,7 @@ class MaterialController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/materials",
+     *     path="/api/v1/materials",
      *     tags={"Материалы"},
      *     summary="Создать новый материал",
      *     description="Создаёт новый материал и возвращает его.",
@@ -98,7 +98,7 @@ class MaterialController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/materials/{id}",
+     *     path="/api/v1/materials/{id}",
      *     tags={"Материалы"},
      *     summary="Обновить материал",
      *     description="Обновляет существующий материал по его ID.",
@@ -135,7 +135,7 @@ class MaterialController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/materials/{id}",
+     *     path="/api/v1/materials/{id}",
      *     tags={"Материалы"},
      *     summary="Удалить материал",
      *     description="Удаляет существующий материал по его ID.",

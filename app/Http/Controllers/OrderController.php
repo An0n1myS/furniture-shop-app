@@ -17,7 +17,7 @@ class OrderController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/orders",
+     *     path="/api/v1/orders",
      *     tags={"Заказы"},
      *     summary="Получить все заказы",
      *     description="Возвращает список всех заказов.",
@@ -38,7 +38,7 @@ class OrderController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/orders/{id}",
+     *     path="/api/v1/orders/{id}",
      *     tags={"Заказы"},
      *     summary="Получить заказ по ID",
      *     description="Возвращает заказ по его ID.",
@@ -67,7 +67,7 @@ class OrderController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/orders",
+     *     path="/api/v1/orders",
      *     tags={"Заказы"},
      *     summary="Создать новый заказ",
      *     description="Создаёт новый заказ и возвращает его.",
@@ -97,7 +97,7 @@ class OrderController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/orders/{id}",
+     *     path="/api/v1/orders/{id}",
      *     tags={"Заказы"},
      *     summary="Обновить заказ",
      *     description="Обновляет существующий заказ по его ID.",
@@ -134,7 +134,7 @@ class OrderController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/orders/{id}",
+     *     path="/api/v1/orders/{id}",
      *     tags={"Заказы"},
      *     summary="Удалить заказ",
      *     description="Удаляет существующий заказ по его ID.",
