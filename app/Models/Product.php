@@ -4,7 +4,31 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use OpenApi\Annotations as OA;
 
+/**
+ * @OA\Schema(
+ *     schema="Product",
+ *     type="object",
+ *     required={"id", "name", "price"},
+ *     @OA\Property(
+ *         property="id",
+ *         type="integer",
+ *         description="ID продукта"
+ *     ),
+ *     @OA\Property(
+ *         property="name",
+ *         type="string",
+ *         description="Название продукта"
+ *     ),
+ *     @OA\Property(
+ *         property="price",
+ *         type="number",
+ *         format="float",
+ *         description="Цена продукта"
+ *     )
+ * )
+ */
 class Product extends Model
 {
     use HasFactory;
