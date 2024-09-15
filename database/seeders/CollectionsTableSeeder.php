@@ -10,13 +10,27 @@ class CollectionsTableSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('collections')->insert(array_map(function () {
-            return [
+        $collections = [
+            'avangarde',
+            'simple',
+            'leather',
+            'young',
+            'elegance',
+            'dream',
+            'box springs',
+            'box springs massive',
+            'relax',
+            'accessories',
+            'modern'
+        ];
+
+        foreach ($collections as $collection) {
+            DB::table('collections')->insert(array_merge([
                 'id' => Str::uuid(),
-                'title' => Str::random(10),
+                'title' => $collection,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ];
-        }, range(1, 25)));
+            ]));
+        }
     }
 }

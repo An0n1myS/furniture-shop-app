@@ -10,13 +10,26 @@ class ColorsTableSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('colors')->insert(array_map(function () {
-            return [
+        $colors = [
+            'grey',
+            'dark grey',
+            'white',
+            'black',
+            'rose',
+            'dark blue',
+            'green',
+            'brown',
+            'beige',
+            'blue',
+        ];
+
+        foreach ($colors as $color) {
+            DB::table('colors')->insert(array_merge([
                 'id' => Str::uuid(),
-                'title' => Str::random(10),
+                'title' => $color,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ];
-        }, range(1, 25)));
+            ]));
+        }
     }
 }

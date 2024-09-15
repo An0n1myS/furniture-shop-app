@@ -10,13 +10,23 @@ class MaterialsTableSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('materials')->insert(array_map(function () {
-            return [
+        $materials = [
+            'austin',
+            'leather',
+            'ohio',
+            'oregon',
+            'alaska',
+            'velvet',
+
+        ];
+
+        foreach ($materials as $material) {
+            DB::table('materials')->insert(array_merge([
                 'id' => Str::uuid(),
-                'title' => Str::random(10),
+                'title' => $material,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ];
-        }, range(1, 25)));
+            ]));
+        }
     }
 }

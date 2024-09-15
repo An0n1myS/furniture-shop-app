@@ -10,13 +10,22 @@ class CategoriesTableSeeder extends Seeder
 {
     public function run()
     {
-        DB::table('categories')->insert(array_map(function () {
-            return [
+        $categories = [
+            'corner sofas',
+            'sofas',
+            'beds',
+            'chaise longues',
+            'armchairs',
+            'poufs',
+        ];
+
+        foreach ($categories as $category) {
+            DB::table('categories')->insert(array_merge([
                 'id' => Str::uuid(),
-                'title' => Str::random(10),
+                'title' => $category,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ];
-        }, range(1, 25)));
+            ]));
+        }
     }
 }
