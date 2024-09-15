@@ -17,7 +17,7 @@ class ColorController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/v1/colors",
+     *     path="/colors",
      *     tags={"Цвета"},
      *     summary="Получить все цвета",
      *     description="Возвращает список всех цветов.",
@@ -38,7 +38,7 @@ class ColorController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/v1/colors/{id}",
+     *     path="/colors/{id}",
      *     tags={"Цвета"},
      *     summary="Получить цвет по ID",
      *     description="Возвращает цвет по его ID.",
@@ -67,7 +67,7 @@ class ColorController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/v1/colors",
+     *     path="/colors",
      *     tags={"Цвета"},
      *     summary="Создать новый цвет",
      *     description="Создаёт новый цвет и возвращает его.",
@@ -97,7 +97,7 @@ class ColorController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/v1/colors/{id}",
+     *     path="/colors/{id}",
      *     tags={"Цвета"},
      *     summary="Обновить цвет",
      *     description="Обновляет существующий цвет по его ID.",
@@ -134,7 +134,7 @@ class ColorController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/v1/colors/{id}",
+     *     path="/colors/{id}",
      *     tags={"Цвета"},
      *     summary="Удалить цвет",
      *     description="Удаляет существующий цвет по его ID.",

@@ -18,7 +18,7 @@ class PaymentController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/v1/payments",
+     *     path="/payments",
      *     tags={"Платежи"},
      *     summary="Получить все платежи",
      *     description="Возвращает список всех платежей.",
@@ -39,7 +39,7 @@ class PaymentController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/v1/payments/{id}",
+     *     path="/payments/{id}",
      *     tags={"Платежи"},
      *     summary="Получить платеж по ID",
      *     description="Возвращает платеж по его ID.",
@@ -68,7 +68,7 @@ class PaymentController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/v1/payments",
+     *     path="/payments",
      *     tags={"Платежи"},
      *     summary="Создать новый платеж",
      *     description="Создаёт новый платеж и возвращает его.",
@@ -98,7 +98,7 @@ class PaymentController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/v1/payments/{id}",
+     *     path="/payments/{id}",
      *     tags={"Платежи"},
      *     summary="Обновить платеж",
      *     description="Обновляет существующий платеж по его ID.",
@@ -135,7 +135,7 @@ class PaymentController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/v1/payments/{id}",
+     *     path="/payments/{id}",
      *     tags={"Платежи"},
      *     summary="Удалить платеж",
      *     description="Удаляет существующий платеж по его ID.",

@@ -18,7 +18,7 @@ class CartItemController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/v1/cart-items",
+     *     path="/cart-items",
      *     tags={"Элементы корзины"},
      *     summary="Получить все элементы корзины",
      *     description="Возвращает список всех элементов корзины.",
@@ -39,7 +39,7 @@ class CartItemController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/v1/cart-items/{id}",
+     *     path="/cart-items/{id}",
      *     tags={"Элементы корзины"},
      *     summary="Получить элемент корзины по ID",
      *     description="Возвращает элемент корзины по его ID.",
@@ -68,7 +68,7 @@ class CartItemController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/v1/cart-items",
+     *     path="/cart-items",
      *     tags={"Элементы корзины"},
      *     summary="Создать новый элемент корзины",
      *     description="Создаёт новый элемент корзины и возвращает его.",
@@ -98,7 +98,7 @@ class CartItemController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/v1/cart-items/{id}",
+     *     path="/cart-items/{id}",
      *     tags={"Элементы корзины"},
      *     summary="Обновить элемент корзины",
      *     description="Обновляет существующий элемент корзины по его ID.",
@@ -135,7 +135,7 @@ class CartItemController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/v1/cart-items/{id}",
+     *     path="/cart-items/{id}",
      *     tags={"Элементы корзины"},
      *     summary="Удалить элемент корзины",
      *     description="Удаляет существующий элемент корзины по его ID.",

@@ -18,7 +18,7 @@ class PhotoController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/v1/photos",
+     *     path="/photos",
      *     tags={"Фотографии"},
      *     summary="Получить все фотографии",
      *     description="Возвращает список всех фотографий.",
@@ -39,7 +39,7 @@ class PhotoController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/v1/photos/{id}",
+     *     path="/photos/{id}",
      *     tags={"Фотографии"},
      *     summary="Получить фотографию по ID",
      *     description="Возвращает фотографию по её ID.",
@@ -68,7 +68,7 @@ class PhotoController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/v1/photos",
+     *     path="/photos",
      *     tags={"Фотографии"},
      *     summary="Создать новую фотографию",
      *     description="Создаёт новую фотографию и возвращает её.",
@@ -98,7 +98,7 @@ class PhotoController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/v1/photos/{id}",
+     *     path="/photos/{id}",
      *     tags={"Фотографии"},
      *     summary="Обновить фотографию",
      *     description="Обновляет существующую фотографию по её ID.",
@@ -135,7 +135,7 @@ class PhotoController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/v1/photos/{id}",
+     *     path="/photos/{id}",
      *     tags={"Фотографии"},
      *     summary="Удалить фотографию",
      *     description="Удаляет существующую фотографию по её ID.",

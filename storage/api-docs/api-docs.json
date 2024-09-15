@@ -16,14 +16,14 @@
     ],
     "paths": {
         "/api/v1/": {},
-        "/api/v1/carts": {
+        "/carts": {
             "get": {
                 "tags": [
                     "Корзины"
                 ],
                 "summary": "Получить все корзины",
                 "description": "Возвращает список всех корзин.",
-                "operationId": "ff86d09aae5bf202304405392c1080f9",
+                "operationId": "bf4fcfa5c4963324af8f7c4709190694",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -39,16 +39,49 @@
                         }
                     }
                 }
+            },
+            "post": {
+                "tags": [
+                    "Корзины"
+                ],
+                "summary": "Создать новую корзину",
+                "description": "Создаёт новую корзину и возвращает её.",
+                "operationId": "4166fd0418f4557cdaaf8dfcc29eb00d",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Cart"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Корзина создана",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/Cart"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Неверный ввод"
+                    }
+                }
             }
         },
-        "/api/carts/{id}": {
+        "/carts/{id}": {
             "get": {
                 "tags": [
                     "Корзины"
                 ],
                 "summary": "Получить корзину по ID",
                 "description": "Возвращает корзину по её ID.",
-                "operationId": "d0f9c90f921e5cace8d847eb077f6b3d",
+                "operationId": "2a3c77b10b2ac68693ab31bd63102a98",
                 "parameters": [
                     {
                         "name": "id",
@@ -82,7 +115,7 @@
                 ],
                 "summary": "Обновить корзину",
                 "description": "Обновляет существующую корзину по её ID.",
-                "operationId": "873541d907e8e905f5ef54604acd7c9b",
+                "operationId": "ab922d9c70155dfe7fc1f040ec36420d",
                 "parameters": [
                     {
                         "name": "id",
@@ -126,7 +159,7 @@
                 ],
                 "summary": "Удалить корзину",
                 "description": "Удаляет существующую корзину по её ID.",
-                "operationId": "904192354e6febb57372f82c766440b6",
+                "operationId": "5f325f0730a847327428a8f5f80423a9",
                 "parameters": [
                     {
                         "name": "id",
@@ -148,49 +181,14 @@
                 }
             }
         },
-        "/api/carts": {
-            "post": {
-                "tags": [
-                    "Корзины"
-                ],
-                "summary": "Создать новую корзину",
-                "description": "Создаёт новую корзину и возвращает её.",
-                "operationId": "06affd160606e43fb60f39628e5bd33a",
-                "requestBody": {
-                    "required": true,
-                    "content": {
-                        "application/json": {
-                            "schema": {
-                                "$ref": "#/components/schemas/Cart"
-                            }
-                        }
-                    }
-                },
-                "responses": {
-                    "201": {
-                        "description": "Корзина создана",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "$ref": "#/components/schemas/Cart"
-                                }
-                            }
-                        }
-                    },
-                    "400": {
-                        "description": "Неверный ввод"
-                    }
-                }
-            }
-        },
-        "/api/cart-items": {
+        "/cart-items": {
             "get": {
                 "tags": [
                     "Элементы корзины"
                 ],
                 "summary": "Получить все элементы корзины",
                 "description": "Возвращает список всех элементов корзины.",
-                "operationId": "4233993f8a5847bc1b5329e9d1b898a4",
+                "operationId": "0a2bfd05b38302128fc15029d3788229",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -213,7 +211,7 @@
                 ],
                 "summary": "Создать новый элемент корзины",
                 "description": "Создаёт новый элемент корзины и возвращает его.",
-                "operationId": "0a5df60f7d91780d6e0863dc698a47e0",
+                "operationId": "42fcb619e6582168be9e7e14c020484b",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -241,14 +239,14 @@
                 }
             }
         },
-        "/api/cart-items/{id}": {
+        "/cart-items/{id}": {
             "get": {
                 "tags": [
                     "Элементы корзины"
                 ],
                 "summary": "Получить элемент корзины по ID",
                 "description": "Возвращает элемент корзины по его ID.",
-                "operationId": "cd84f5f7af2553b08417f0c123e80a0f",
+                "operationId": "3a2aa580d9f107d4085f6fc18b6c0a05",
                 "parameters": [
                     {
                         "name": "id",
@@ -282,7 +280,7 @@
                 ],
                 "summary": "Обновить элемент корзины",
                 "description": "Обновляет существующий элемент корзины по его ID.",
-                "operationId": "78a5883c4ab72212dc40f79a6f5f9232",
+                "operationId": "44fb890e0b0f71a6fc8e0c1dbbbea23b",
                 "parameters": [
                     {
                         "name": "id",
@@ -326,7 +324,7 @@
                 ],
                 "summary": "Удалить элемент корзины",
                 "description": "Удаляет существующий элемент корзины по его ID.",
-                "operationId": "7ee59aafe2ba3f949091fb7d40d907c7",
+                "operationId": "dcc5efe6905d989930cb72d15cbf2b4a",
                 "parameters": [
                     {
                         "name": "id",
@@ -348,14 +346,14 @@
                 }
             }
         },
-        "/api/categories": {
+        "/categories": {
             "get": {
                 "tags": [
                     "Категории"
                 ],
                 "summary": "Получить все категории",
                 "description": "Возвращает список всех категорий.",
-                "operationId": "3f5817a34833d0a1f4af4548dd3aeaba",
+                "operationId": "ead5fb1cf2a7453acb2e37928a1b1eaf",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -378,7 +376,7 @@
                 ],
                 "summary": "Создать новую категорию",
                 "description": "Создаёт новую категорию и возвращает её.",
-                "operationId": "71fcad552bb0eaba9fb191fd8d8dcab0",
+                "operationId": "bb02f0320882db37f99574196577e446",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -406,14 +404,14 @@
                 }
             }
         },
-        "/api/categories/{id}": {
+        "/categories/{id}": {
             "get": {
                 "tags": [
                     "Категории"
                 ],
                 "summary": "Получить категорию по ID",
                 "description": "Возвращает категорию по её ID.",
-                "operationId": "c68e76d323c008827a9e47398b1583de",
+                "operationId": "4cdf41756315109f1efc72787db5830a",
                 "parameters": [
                     {
                         "name": "id",
@@ -447,7 +445,7 @@
                 ],
                 "summary": "Обновить категорию",
                 "description": "Обновляет существующую категорию по её ID.",
-                "operationId": "0e686b2748211cc688333ed705dc111f",
+                "operationId": "19954b1f8aa4916b5f032dc28ea36a24",
                 "parameters": [
                     {
                         "name": "id",
@@ -491,7 +489,7 @@
                 ],
                 "summary": "Удалить категорию",
                 "description": "Удаляет существующую категорию по её ID.",
-                "operationId": "4c12e22a7f8c617bd83bfa1fdc05428d",
+                "operationId": "f1b8af6e84bd52b9594d98bde748ebd6",
                 "parameters": [
                     {
                         "name": "id",
@@ -513,14 +511,14 @@
                 }
             }
         },
-        "/api/collections": {
+        "/collections": {
             "get": {
                 "tags": [
                     "Collections"
                 ],
                 "summary": "Получить все коллекции",
                 "description": "Возвращает список всех коллекций.",
-                "operationId": "8d29964c440a1ce191691a2cf3408462",
+                "operationId": "7b241eefae469d00143adf95e94029b1",
                 "responses": {
                     "200": {
                         "description": "Успешная операция",
@@ -543,7 +541,7 @@
                 ],
                 "summary": "Создать новую коллекцию",
                 "description": "Создает новую коллекцию.",
-                "operationId": "f4aa290b8c5210d66436d26b31084018",
+                "operationId": "e22d3436e9fcb5530d8a74cb9f124037",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -571,14 +569,14 @@
                 }
             }
         },
-        "/api/collections/{id}": {
+        "/collections/{id}": {
             "get": {
                 "tags": [
                     "Collections"
                 ],
                 "summary": "Получить коллекцию по ID",
                 "description": "Возвращает коллекцию по указанному ID.",
-                "operationId": "1672f79b00f0cb620a0c1150636a4fb1",
+                "operationId": "5346e26517da2213584c2e3c0ea2798c",
                 "parameters": [
                     {
                         "name": "id",
@@ -612,7 +610,7 @@
                 ],
                 "summary": "Обновить коллекцию по ID",
                 "description": "Обновляет существующую коллекцию.",
-                "operationId": "d221c6e809d8620140ac4c29b499bd27",
+                "operationId": "d353584391ab8d68997dce8bd03fdb14",
                 "parameters": [
                     {
                         "name": "id",
@@ -656,7 +654,7 @@
                 ],
                 "summary": "Удалить коллекцию по ID",
                 "description": "Удаляет коллекцию по указанному ID.",
-                "operationId": "360e3040a86491d61b7d5ef448955d58",
+                "operationId": "32002b244bf5d7d47b4fd5033a6e7414",
                 "parameters": [
                     {
                         "name": "id",
@@ -678,14 +676,14 @@
                 }
             }
         },
-        "/api/colors": {
+        "/colors": {
             "get": {
                 "tags": [
                     "Цвета"
                 ],
                 "summary": "Получить все цвета",
                 "description": "Возвращает список всех цветов.",
-                "operationId": "9af5ded8d7143a0f97e53725eda97464",
+                "operationId": "b7c785cff73eda4725b257c93f948de7",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -708,7 +706,7 @@
                 ],
                 "summary": "Создать новый цвет",
                 "description": "Создаёт новый цвет и возвращает его.",
-                "operationId": "e4d3770c69f36a71c5936b3b35655342",
+                "operationId": "61727ee3eff48ce1bc3a20a114cf157e",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -736,14 +734,14 @@
                 }
             }
         },
-        "/api/colors/{id}": {
+        "/colors/{id}": {
             "get": {
                 "tags": [
                     "Цвета"
                 ],
                 "summary": "Получить цвет по ID",
                 "description": "Возвращает цвет по его ID.",
-                "operationId": "c0e5a39d91e5093e2e0f77823615db5a",
+                "operationId": "1b229325037285808123ce0adff57b7b",
                 "parameters": [
                     {
                         "name": "id",
@@ -777,7 +775,7 @@
                 ],
                 "summary": "Обновить цвет",
                 "description": "Обновляет существующий цвет по его ID.",
-                "operationId": "717be7234f38d1fb4ff4678ba4f59581",
+                "operationId": "3ab91c4153f1fdb036196c4650741838",
                 "parameters": [
                     {
                         "name": "id",
@@ -821,7 +819,7 @@
                 ],
                 "summary": "Удалить цвет",
                 "description": "Удаляет существующий цвет по его ID.",
-                "operationId": "1667d6964960e3a8158e80e50c69f19c",
+                "operationId": "628821a697156a3509b0bedf546e951b",
                 "parameters": [
                     {
                         "name": "id",
@@ -843,14 +841,14 @@
                 }
             }
         },
-        "/api/deliveries": {
+        "/deliveries": {
             "get": {
                 "tags": [
                     "Доставки"
                 ],
                 "summary": "Получить все доставки",
                 "description": "Возвращает список всех доставок.",
-                "operationId": "8956e1b77640b7a90e5bb7ba36de2d60",
+                "operationId": "6071d3bb26f4848ae5e421ceaa1a7cc6",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -873,7 +871,7 @@
                 ],
                 "summary": "Создать новую доставку",
                 "description": "Создаёт новую доставку и возвращает её.",
-                "operationId": "245395dce2f0e548856730622f0dcd3c",
+                "operationId": "b585494cbe4a71f83177c0d8cb2925aa",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -901,14 +899,14 @@
                 }
             }
         },
-        "/api/deliveries/{id}": {
+        "/deliveries/{id}": {
             "get": {
                 "tags": [
                     "Доставки"
                 ],
                 "summary": "Получить доставку по ID",
                 "description": "Возвращает доставку по её ID.",
-                "operationId": "684f39c23c6a47f928e60af9771655a2",
+                "operationId": "ead91d2699775d5a02f53c349c45db13",
                 "parameters": [
                     {
                         "name": "id",
@@ -942,7 +940,7 @@
                 ],
                 "summary": "Обновить доставку",
                 "description": "Обновляет существующую доставку по её ID.",
-                "operationId": "d7ae8c2bafd7da8b9c1a95655e620a8a",
+                "operationId": "445e3c9bfea1f251d6358ce36d0a0a27",
                 "parameters": [
                     {
                         "name": "id",
@@ -986,7 +984,7 @@
                 ],
                 "summary": "Удалить доставку",
                 "description": "Удаляет существующую доставку по её ID.",
-                "operationId": "219911061b909ebc0cc987e9cbb4639d",
+                "operationId": "16f2387141c725a59095dc51cc5f60e8",
                 "parameters": [
                     {
                         "name": "id",
@@ -1008,14 +1006,14 @@
                 }
             }
         },
-        "/api/galleries": {
+        "/galleries": {
             "get": {
                 "tags": [
                     "Галереи"
                 ],
                 "summary": "Получить все галереи",
                 "description": "Возвращает список всех галерей.",
-                "operationId": "4308cb10fec6f2c0e72356e3f9c2ea57",
+                "operationId": "03cb29d410fdd5fd66272776b9c69043",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -1038,7 +1036,7 @@
                 ],
                 "summary": "Создать новую галерею",
                 "description": "Создаёт новую галерею и возвращает её.",
-                "operationId": "e879c41d931b6fb537c5c19ff8eff892",
+                "operationId": "92fee36c86e64a437255d78f329a0192",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1066,14 +1064,14 @@
                 }
             }
         },
-        "/api/galleries/{id}": {
+        "/galleries/{id}": {
             "get": {
                 "tags": [
                     "Галереи"
                 ],
                 "summary": "Получить галерею по ID",
                 "description": "Возвращает галерею по её ID.",
-                "operationId": "d55ab746a0aab8fa7e6fedfabece77fd",
+                "operationId": "e69f9426991df223ad1ba1c6553684c6",
                 "parameters": [
                     {
                         "name": "id",
@@ -1107,7 +1105,7 @@
                 ],
                 "summary": "Обновить галерею",
                 "description": "Обновляет существующую галерею по её ID.",
-                "operationId": "b57576127d9ba5f3903b086f48fd3970",
+                "operationId": "9945a939984e4dcfd9089403fd863cc5",
                 "parameters": [
                     {
                         "name": "id",
@@ -1151,7 +1149,7 @@
                 ],
                 "summary": "Удалить галерею",
                 "description": "Удаляет существующую галерею по её ID.",
-                "operationId": "0789f145f187b6dad6df94da640d956c",
+                "operationId": "d5d0df99a363ef9185f85c25a0b101fc",
                 "parameters": [
                     {
                         "name": "id",
@@ -1173,14 +1171,14 @@
                 }
             }
         },
-        "/api/materials": {
+        "/materials": {
             "get": {
                 "tags": [
                     "Материалы"
                 ],
                 "summary": "Получить все материалы",
                 "description": "Возвращает список всех материалов.",
-                "operationId": "0821961cdcf7173ea92453089dd0a172",
+                "operationId": "06b8156c0db9f165fe22e7d8c196a8ac",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -1203,7 +1201,7 @@
                 ],
                 "summary": "Создать новый материал",
                 "description": "Создаёт новый материал и возвращает его.",
-                "operationId": "6cd77951b1448e367c3069ed6687379c",
+                "operationId": "afa98e9e373218e88e83aeed1a08b993",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1231,14 +1229,14 @@
                 }
             }
         },
-        "/api/materials/{id}": {
+        "/materials/{id}": {
             "get": {
                 "tags": [
                     "Материалы"
                 ],
                 "summary": "Получить материал по ID",
                 "description": "Возвращает материал по его ID.",
-                "operationId": "6c25d42a583c7f961ccf8548c969d309",
+                "operationId": "aad2e2cc01afd991dc5c79f8b11ee100",
                 "parameters": [
                     {
                         "name": "id",
@@ -1272,7 +1270,7 @@
                 ],
                 "summary": "Обновить материал",
                 "description": "Обновляет существующий материал по его ID.",
-                "operationId": "182f62eb940ca7d446499048c5ef7047",
+                "operationId": "2432855334fa771e0e906fc376057411",
                 "parameters": [
                     {
                         "name": "id",
@@ -1316,7 +1314,7 @@
                 ],
                 "summary": "Удалить материал",
                 "description": "Удаляет существующий материал по его ID.",
-                "operationId": "0fa788a436a67a78b74e4da4e847c697",
+                "operationId": "d1950613fe1009ec36d23858d3fd25c1",
                 "parameters": [
                     {
                         "name": "id",
@@ -1338,14 +1336,14 @@
                 }
             }
         },
-        "/api/orders": {
+        "/orders": {
             "get": {
                 "tags": [
                     "Заказы"
                 ],
                 "summary": "Получить все заказы",
                 "description": "Возвращает список всех заказов.",
-                "operationId": "2cd7e03021e72d9d799c12dfe179c865",
+                "operationId": "325fd3d55bbe9bb39645269928fa4983",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -1368,7 +1366,7 @@
                 ],
                 "summary": "Создать новый заказ",
                 "description": "Создаёт новый заказ и возвращает его.",
-                "operationId": "d690d6834318e9b064df441e854de8b9",
+                "operationId": "445bab4f7dc9ea6fcd54f286c0209478",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1396,14 +1394,14 @@
                 }
             }
         },
-        "/api/orders/{id}": {
+        "/orders/{id}": {
             "get": {
                 "tags": [
                     "Заказы"
                 ],
                 "summary": "Получить заказ по ID",
                 "description": "Возвращает заказ по его ID.",
-                "operationId": "c29621029e70f65247909d3e09031118",
+                "operationId": "f088d34a2737782215f435f854e31de5",
                 "parameters": [
                     {
                         "name": "id",
@@ -1437,7 +1435,7 @@
                 ],
                 "summary": "Обновить заказ",
                 "description": "Обновляет существующий заказ по его ID.",
-                "operationId": "6a7029f5510ca08e28a2d58a5fe19439",
+                "operationId": "54c2858108887d7a1252bcc4325158c2",
                 "parameters": [
                     {
                         "name": "id",
@@ -1481,7 +1479,7 @@
                 ],
                 "summary": "Удалить заказ",
                 "description": "Удаляет существующий заказ по его ID.",
-                "operationId": "303a7b797887b66c7790c4c187b54790",
+                "operationId": "deb80b1c70721ac0812c9574580984c1",
                 "parameters": [
                     {
                         "name": "id",
@@ -1503,14 +1501,14 @@
                 }
             }
         },
-        "/api/order-items": {
+        "/order-items": {
             "get": {
                 "tags": [
                     "Элементы заказа"
                 ],
                 "summary": "Получить все элементы заказа",
                 "description": "Возвращает список всех элементов заказа.",
-                "operationId": "6a6b106e104d558bfc813be8f4adf2f4",
+                "operationId": "9695c663a16bfef06c3a606f1474c1ee",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -1533,7 +1531,7 @@
                 ],
                 "summary": "Создать новый элемент заказа",
                 "description": "Создаёт новый элемент заказа и возвращает его.",
-                "operationId": "3390f5f422c701c6e520cc66e9d18037",
+                "operationId": "e0745b9b034798e757c9bf37e0155c75",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1561,14 +1559,14 @@
                 }
             }
         },
-        "/api/order-items/{id}": {
+        "/order-items/{id}": {
             "get": {
                 "tags": [
                     "Элементы заказа"
                 ],
                 "summary": "Получить элемент заказа по ID",
                 "description": "Возвращает элемент заказа по его ID.",
-                "operationId": "f75b95ab4f85b8772c2981a0d6e449bf",
+                "operationId": "f9bc2ce86610479f2cb01a46799f6b5d",
                 "parameters": [
                     {
                         "name": "id",
@@ -1602,7 +1600,7 @@
                 ],
                 "summary": "Обновить элемент заказа",
                 "description": "Обновляет существующий элемент заказа по его ID.",
-                "operationId": "c1778023c9a3ecbc744efb765d68415f",
+                "operationId": "d371a4e654d56a7264e89ee429c2d879",
                 "parameters": [
                     {
                         "name": "id",
@@ -1646,7 +1644,7 @@
                 ],
                 "summary": "Удалить элемент заказа",
                 "description": "Удаляет существующий элемент заказа по его ID.",
-                "operationId": "87d21d8e8c19f5d96b514a9aa273dede",
+                "operationId": "06c925c83b134a19b67b40c984cb0596",
                 "parameters": [
                     {
                         "name": "id",
@@ -1668,14 +1666,14 @@
                 }
             }
         },
-        "/api/payments": {
+        "/payments": {
             "get": {
                 "tags": [
                     "Платежи"
                 ],
                 "summary": "Получить все платежи",
                 "description": "Возвращает список всех платежей.",
-                "operationId": "826dc6b24dd704607aa018a59207dd96",
+                "operationId": "65567ad73dd4b0cc01c4856a6bb7e600",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -1698,7 +1696,7 @@
                 ],
                 "summary": "Создать новый платеж",
                 "description": "Создаёт новый платеж и возвращает его.",
-                "operationId": "5e2794ba3d3c64e70873367505e4a751",
+                "operationId": "3cb7bc2c2ad5498b4ad9521811750cc1",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1726,14 +1724,14 @@
                 }
             }
         },
-        "/api/payments/{id}": {
+        "/payments/{id}": {
             "get": {
                 "tags": [
                     "Платежи"
                 ],
                 "summary": "Получить платеж по ID",
                 "description": "Возвращает платеж по его ID.",
-                "operationId": "a9a7656e0f22931dbcedc57a2d959554",
+                "operationId": "a4207c19fecbebc99932a8348b19adf1",
                 "parameters": [
                     {
                         "name": "id",
@@ -1767,7 +1765,7 @@
                 ],
                 "summary": "Обновить платеж",
                 "description": "Обновляет существующий платеж по его ID.",
-                "operationId": "9f607012ea3accda178adb489aa28da2",
+                "operationId": "7f3042f886092282c90cf678fa8b0d78",
                 "parameters": [
                     {
                         "name": "id",
@@ -1811,7 +1809,7 @@
                 ],
                 "summary": "Удалить платеж",
                 "description": "Удаляет существующий платеж по его ID.",
-                "operationId": "eee625edf09d69ad0d35b893a3b4f087",
+                "operationId": "6ee6ad54e3a047f39a06ffcb4cfc6b7a",
                 "parameters": [
                     {
                         "name": "id",
@@ -1833,14 +1831,14 @@
                 }
             }
         },
-        "/api/photos": {
+        "/photos": {
             "get": {
                 "tags": [
                     "Фотографии"
                 ],
                 "summary": "Получить все фотографии",
                 "description": "Возвращает список всех фотографий.",
-                "operationId": "8e878cf68237e684e4180bf0e1761116",
+                "operationId": "079f6213f018a45e1820798830065757",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -1863,7 +1861,7 @@
                 ],
                 "summary": "Создать новую фотографию",
                 "description": "Создаёт новую фотографию и возвращает её.",
-                "operationId": "e21993f5b41f1c66ee580264d09c4cea",
+                "operationId": "4331303a20951bd23e2ede83046c8e48",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -1891,14 +1889,14 @@
                 }
             }
         },
-        "/api/photos/{id}": {
+        "/photos/{id}": {
             "get": {
                 "tags": [
                     "Фотографии"
                 ],
                 "summary": "Получить фотографию по ID",
                 "description": "Возвращает фотографию по её ID.",
-                "operationId": "6a1d12e7081fa8f2a91f99ec6a54f7b7",
+                "operationId": "00eb53d8793df47186ffa2f5c390be0c",
                 "parameters": [
                     {
                         "name": "id",
@@ -1932,7 +1930,7 @@
                 ],
                 "summary": "Обновить фотографию",
                 "description": "Обновляет существующую фотографию по её ID.",
-                "operationId": "4710f9234345a7677c8bf4bd74955f19",
+                "operationId": "f828be90d082c2c242cd99f0e591e652",
                 "parameters": [
                     {
                         "name": "id",
@@ -1976,7 +1974,7 @@
                 ],
                 "summary": "Удалить фотографию",
                 "description": "Удаляет существующую фотографию по её ID.",
-                "operationId": "c3a6f386d5b7a7af20cd331c2b411891",
+                "operationId": "0e1387c80eb05cb3059266b8ae46dca0",
                 "parameters": [
                     {
                         "name": "id",
@@ -1998,14 +1996,14 @@
                 }
             }
         },
-        "/api/products": {
+        "/products": {
             "get": {
                 "tags": [
                     "Продукты"
                 ],
                 "summary": "Получить все продукты",
                 "description": "Возвращает список всех продуктов.",
-                "operationId": "1bfaa78d1c2c3848ab8165c5dadcad3e",
+                "operationId": "c1ff6f862214e1896c59cfe0491ce0e8",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -2028,7 +2026,7 @@
                 ],
                 "summary": "Создать новый продукт",
                 "description": "Создаёт новый продукт и возвращает его.",
-                "operationId": "e8185e307706e2cd84bbcf5171e2f09d",
+                "operationId": "399770d33fa4672f1216707d0e236763",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2056,14 +2054,14 @@
                 }
             }
         },
-        "/api/products/{id}": {
+        "/products/{id}": {
             "get": {
                 "tags": [
                     "Продукты"
                 ],
                 "summary": "Получить продукт по ID",
                 "description": "Возвращает продукт по его ID.",
-                "operationId": "7ab21ddb713501f3d4c2914892c02a21",
+                "operationId": "b46f4aa73232d0368eee698a082342a4",
                 "parameters": [
                     {
                         "name": "id",
@@ -2097,7 +2095,7 @@
                 ],
                 "summary": "Обновить продукт",
                 "description": "Обновляет существующий продукт по его ID.",
-                "operationId": "6a7e11900844cd85cff66e662b82bd4c",
+                "operationId": "1419d479f9340e30e67fe21a2ca525b7",
                 "parameters": [
                     {
                         "name": "id",
@@ -2141,7 +2139,7 @@
                 ],
                 "summary": "Удалить продукт",
                 "description": "Удаляет существующий продукт по его ID.",
-                "operationId": "e80a6ca46716acee6b47ea1ac91663c0",
+                "operationId": "fe34b364a3f192305598b65d04d06b5d",
                 "parameters": [
                     {
                         "name": "id",
@@ -2163,14 +2161,14 @@
                 }
             }
         },
-        "/api/users": {
+        "/users": {
             "get": {
                 "tags": [
                     "Пользователи"
                 ],
                 "summary": "Получить всех пользователей",
                 "description": "Возвращает список всех пользователей.",
-                "operationId": "c457726701591d1183b53aa71fc13441",
+                "operationId": "7e2f5799553ec93c9c43e2a58490d447",
                 "responses": {
                     "200": {
                         "description": "Операция выполнена успешно",
@@ -2193,7 +2191,7 @@
                 ],
                 "summary": "Создать нового пользователя",
                 "description": "Создаёт нового пользователя и возвращает его.",
-                "operationId": "592819a0265360b2014512d6dbfaf0e7",
+                "operationId": "a1fce870c566eb5fc0cf3178ec5d2fed",
                 "requestBody": {
                     "required": true,
                     "content": {
@@ -2221,14 +2219,14 @@
                 }
             }
         },
-        "/api/users/{id}": {
+        "/users/{id}": {
             "get": {
                 "tags": [
                     "Пользователи"
                 ],
                 "summary": "Получить пользователя по ID",
                 "description": "Возвращает пользователя по его ID.",
-                "operationId": "36a33ff774d5cba33c039dec2c3e0287",
+                "operationId": "910a0c7cf580e1c605648d82a4e57f46",
                 "parameters": [
                     {
                         "name": "id",
@@ -2262,7 +2260,7 @@
                 ],
                 "summary": "Обновить пользователя",
                 "description": "Обновляет существующего пользователя по его ID.",
-                "operationId": "b9091397c8b25f12c6adb74be6ce3a5a",
+                "operationId": "ddfe232db1870b82493bf8bd25596d37",
                 "parameters": [
                     {
                         "name": "id",
@@ -2306,7 +2304,7 @@
                 ],
                 "summary": "Удалить пользователя",
                 "description": "Удаляет существующего пользователя по его ID.",
-                "operationId": "fa56cffde745d3f152f95cbacd936c0b",
+                "operationId": "43dd20becb1f47444e484cbb18ce345c",
                 "parameters": [
                     {
                         "name": "id",

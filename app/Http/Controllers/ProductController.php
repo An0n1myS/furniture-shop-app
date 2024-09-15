@@ -18,7 +18,7 @@ class ProductController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/v1/products",
+     *     path="/products",
      *     tags={"Продукты"},
      *     summary="Получить все продукты",
      *     description="Возвращает список всех продуктов.",
@@ -39,7 +39,7 @@ class ProductController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/v1/products/{id}",
+     *     path="/products/{id}",
      *     tags={"Продукты"},
      *     summary="Получить продукт по ID",
      *     description="Возвращает продукт по его ID.",
@@ -68,7 +68,7 @@ class ProductController extends Controller
 
     /**
      * @OA\Post(
-     *     path="/api/v1/products",
+     *     path="/products",
      *     tags={"Продукты"},
      *     summary="Создать новый продукт",
      *     description="Создаёт новый продукт и возвращает его.",
@@ -98,7 +98,7 @@ class ProductController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/v1/products/{id}",
+     *     path="/products/{id}",
      *     tags={"Продукты"},
      *     summary="Обновить продукт",
      *     description="Обновляет существующий продукт по его ID.",
@@ -135,7 +135,7 @@ class ProductController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/v1/products/{id}",
+     *     path="/products/{id}",
      *     tags={"Продукты"},
      *     summary="Удалить продукт",
      *     description="Удаляет существующий продукт по его ID.",
