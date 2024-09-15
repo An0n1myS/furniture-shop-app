@@ -9,9 +9,9 @@ class CreateGalleriesTable extends Migration
     public function up()
     {
         Schema::create('galleries', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->text('title');
-            $table->uuid('product_id');
+            $table->unsignedBigInteger('product_id');
             $table->timestamps();
             $table->softDeletes();
 

@@ -9,10 +9,10 @@ class CreateOrdersTable extends Migration
     public function up()
     {
         Schema::create('orders', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('user_id');
-            $table->uuid('payment_id');
-            $table->uuid('delivery_id');
+            $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('payment_id');
+            $table->unsignedBigInteger('delivery_id');
             $table->decimal('order_price', 10, 2);
             $table->timestamp('date')->useCurrent();
             $table->timestamps();

@@ -125,7 +125,6 @@ class ProductsTableSeeder extends Seeder
 
         foreach ($products as $product) {
             DB::table('products')->insert(array_merge([
-                'id' => Str::uuid(),
                 'created_at' => now(),
                 'updated_at' => now(),
             ], $product));

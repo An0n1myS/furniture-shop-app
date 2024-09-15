@@ -9,7 +9,7 @@ class CreateCollectionsTable extends Migration
     public function up()
     {
         Schema::create('collections', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('title', 55)->unique();
             $table->timestamps();
             $table->softDeletes();

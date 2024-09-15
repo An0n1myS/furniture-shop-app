@@ -9,8 +9,8 @@ class CreatePhotosTable extends Migration
     public function up()
     {
         Schema::create('photos', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('gallery_id');
+            $table->id();
+            $table->unsignedBigInteger('gallery_id');
             $table->string('photo_url', 255);
             $table->timestamps();
 

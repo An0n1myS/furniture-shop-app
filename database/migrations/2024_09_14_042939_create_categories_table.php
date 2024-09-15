@@ -9,7 +9,7 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('title', 32)->unique();
             $table->timestamps();
             $table->softDeletes();

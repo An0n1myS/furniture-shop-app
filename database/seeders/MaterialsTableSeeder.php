@@ -22,7 +22,6 @@ class MaterialsTableSeeder extends Seeder
 
         foreach ($materials as $material) {
             DB::table('materials')->insert(array_merge([
-                'id' => Str::uuid(),
                 'title' => $material,
                 'created_at' => now(),
                 'updated_at' => now(),

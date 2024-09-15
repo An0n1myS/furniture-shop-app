@@ -8,8 +8,8 @@ class CreateCartsTable extends Migration
     public function up()
     {
         Schema::create('carts', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('user_id');
+            $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

@@ -21,7 +21,6 @@ class CategoriesTableSeeder extends Seeder
 
         foreach ($categories as $category) {
             DB::table('categories')->insert(array_merge([
-                'id' => Str::uuid(),
                 'title' => $category,
                 'created_at' => now(),
                 'updated_at' => now(),

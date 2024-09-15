@@ -9,7 +9,7 @@ class CreateDeliveriesTable extends Migration
     public function up()
     {
         Schema::create('deliveries', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('title', 255)->unique();
             $table->decimal('price', 10, 2);
             $table->timestamps();

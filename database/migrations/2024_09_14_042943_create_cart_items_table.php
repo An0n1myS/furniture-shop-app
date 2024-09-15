@@ -9,9 +9,9 @@ class CreateCartItemsTable extends Migration
     public function up()
     {
         Schema::create('cart_items', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->uuid('cart_id');
-            $table->uuid('product_id');
+            $table->id();
+            $table->unsignedBigInteger('cart_id');
+            $table->unsignedBigInteger('product_id');
             $table->integer('count')->unsigned();
             $table->decimal('total_price', 10, 2);
             $table->timestamps();

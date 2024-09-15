@@ -10,7 +10,7 @@ use OpenApi\Annotations as OA;
  * @OA\Schema(
  *     schema="Product",
  *     type="object",
- *     required={"id", "name", "price"},
+ *     required={"id", "name","description", "price"},
  *     @OA\Property(
  *         property="id",
  *         type="integer",
@@ -21,6 +21,11 @@ use OpenApi\Annotations as OA;
  *         type="string",
  *         description="Название продукта"
  *     ),
+ *          @OA\Property(
+ *          property="description",
+ *          type="string",
+ *          description="Описание продукта"
+ *      ),
  *     @OA\Property(
  *         property="price",
  *         type="number",

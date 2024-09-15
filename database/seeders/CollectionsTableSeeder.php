@@ -26,7 +26,6 @@ class CollectionsTableSeeder extends Seeder
 
         foreach ($collections as $collection) {
             DB::table('collections')->insert(array_merge([
-                'id' => Str::uuid(),
                 'title' => $collection,
                 'created_at' => now(),
                 'updated_at' => now(),

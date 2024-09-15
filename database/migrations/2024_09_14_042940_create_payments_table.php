@@ -9,7 +9,7 @@ class CreatePaymentsTable extends Migration
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('title', 255)->unique();
             $table->timestamps();
             $table->softDeletes();

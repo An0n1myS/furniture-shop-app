@@ -25,7 +25,6 @@ class ColorsTableSeeder extends Seeder
 
         foreach ($colors as $color) {
             DB::table('colors')->insert(array_merge([
-                'id' => Str::uuid(),
                 'title' => $color,
                 'created_at' => now(),
                 'updated_at' => now(),
