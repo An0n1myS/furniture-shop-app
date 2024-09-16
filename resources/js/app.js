@@ -1,13 +1,10 @@
 import './bootstrap';
 import { createApp } from 'vue';
+import router from './router';  // Подключаем маршрутизатор
+import App from './components/App.vue';  // Основной компонент
 
-const app = createApp({});
+const app = createApp(App);  // Используем основной компонент
 
-import ExampleComponent from './components/ExampleComponent.vue';
-app.component('example-component', ExampleComponent);
+app.use(router);  // Подключаем маршрутизатор
 
-// Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
-//     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
-// });
-
-app.mount('#app');
+app.mount('#app');  // Монтируем приложение в элемент с id="app"
